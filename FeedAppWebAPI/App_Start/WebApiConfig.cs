@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Newtonsoft.Json;
 
 namespace FeedAppWebAPI
@@ -10,6 +11,10 @@ namespace FeedAppWebAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            //Enable Cross Origin Resource Sharing (CORS)
+            var cors = new EnableCorsAttribute("http://localhost:58555", "*", "*");
+            config.EnableCors(cors);
+
             // Web API configuration and services
 
             // Web API routes

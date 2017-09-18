@@ -1,0 +1,17 @@
+﻿<div ng-controller="articleController as vm">
+    <h2>{{vm.title}}</h2>
+    <div class="grid-x grid-padding-x">
+        <div class="small-12 medium-6 large-4 column" ng-repeat="article in vm.articles">
+            <div class="movie">
+                <div class="movie-info">
+                    <h3>{{article.Title}}</h3>
+                    <p>{{article.Description}}</p>
+                    <p>{{article.Author}}</p>
+                    <p>{{article.PublishDate}}</p>
+                    <p>{{article.Link}}</p>
+                    <p>{{article.Category}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

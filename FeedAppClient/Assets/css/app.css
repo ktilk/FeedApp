@@ -1,0 +1,46 @@
+body {
+    background-color: #265E7F;
+}
+
+.main {
+    padding: 25px 15px 15px 15px
+}
+
+.wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.movie {
+    background: #fefefe;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 1rem 1rem 0 0;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 0;
+    width: 90%;
+    float: left;
+}
+
+.movie-info {
+    
+}
+
+.button:active {
+    background-color: #fefefe;
+    color: #1779ba
+}
+
+.control-area {
+    padding: 15px 0 0 10px;
+    background: #fefefe;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.control-area-selectbox {
+    padding-left: 20px;
+}

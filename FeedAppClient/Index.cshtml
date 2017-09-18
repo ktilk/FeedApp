@@ -1,0 +1,31 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html ng-app="FeedApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Feed App</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <nav class="top-bar">
+        <div class="wrap">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Feed App</li>
+                    <li>
+                        <a href="/">Articles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="wrap" ng-view></div>
+    </section>
+<footer></footer>
+    
+    @Scripts.Render("~/bundles/angularjs")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/foundation6")
+</body>
+</html>
