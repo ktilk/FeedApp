@@ -9,13 +9,13 @@ namespace DAL.Repositories
 {
     public class ArticleRepository
     {
-        private DataContext dc = new DataContext();
+        private readonly DataContext _dc = new DataContext();
 
-        public List<Article> All => dc.Articles;
+        public List<Article> All => _dc.Articles;
 
         public Article GetById(int id)
         {
-            return dc.Articles.Find(x => x.ArticleId == id);
+            return _dc.Articles.Find(x => x.ArticleId == id);
         }
     }
 }

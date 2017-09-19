@@ -1,11 +1,14 @@
-﻿angular.module("FeedApp", ["ngRoute"]);
+﻿angular.module("FeedApp", ["ngRoute", "ngSanitize"]);
 
 angular.module("FeedApp").config(function($routeProvider) {
     $routeProvider
         .when("/",
         {
-            controller: "articleController",
             templateUrl: "Partials/articles.html"
+        })
+        .when("/article/:id",
+        {
+            templateUrl: "Partials/popupArticle.html"
         });
 
     $routeProvider.otherwise({ redirectTo: "/" });

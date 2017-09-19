@@ -2,7 +2,7 @@
     <h2>{{vm.title}}</h2>
     <div class="grid-x grid-padding-x">
         <div class="small-12 medium-6 large-4 column" ng-repeat="article in vm.articles">
-            <div class="movie">
+            <div class="movie" ng-click="vm.popupArticle(article.ArticleId)">
                 <div class="movie-info">
                     <h3>{{article.Title}}</h3>
                     <p>{{article.Description}}</p>

@@ -117,6 +117,7 @@
     <Content Include="App\Services\articleService.js" />
     <Content Include="Global.asax" />
     <Content Include="Partials\articles.html" />
+    <Content Include="Partials\popupArticle.html" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
