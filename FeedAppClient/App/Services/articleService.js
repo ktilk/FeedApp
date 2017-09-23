@@ -4,7 +4,6 @@ function articleService($http) {
     var service = {
         getArticles: getArticles,
         getArticleById: getArticleById
-        //getArticleViaMercury: getArticleViaMercury
     };
     return service;
 
@@ -18,17 +17,4 @@ function articleService($http) {
         var resp = $http.get(articlesApiUri + id);
         return resp;
     }
-
-    //function getArticleViaMercury(link) {
-    //    var url = mercuryApiUrl + link;
-    //    var resp = $http({
-    //        method: "GET",
-    //        url: url,
-    //        headers: {
-    //            "Content-Type": "application/json",
-    //            "x-api-key": mercuryApiKey
-    //        }
-    //    });
-    //    return resp;
-    //}
 }

@@ -1,5 +1,13 @@
 ﻿<div ng-controller="articleController as vm">
-    <p>{{vm.article.title}}</p>
-    <p>{{vm.article.url}}</p>
-    <div ng-bind-html="vm.article.content"></div>
+    <div class="grid-x grid-margin-x">
+        <div class="small-12">
+            <div class="article article-full">
+                <h1>{{vm.article.title}}</h1>
+                <p>
+                    <a href="{{vm.article.url}}">Original article: {{vm.article.url}}</a>
+                </p>
+                <div ng-bind-html="vm.article.content"></div>
+            </div>
+        </div>
+    </div>
 </div>

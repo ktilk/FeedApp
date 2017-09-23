@@ -1,16 +1,14 @@
 ﻿<div ng-controller="articleController as vm">
     <h2>{{vm.title}}</h2>
-    <div class="grid-x grid-padding-x">
-        <div class="small-12 medium-6 large-4 column" ng-repeat="article in vm.articles">
-            <div class="movie" ng-click="vm.popupArticle(article.ArticleId)">
-                <div class="movie-info">
-                    <h3>{{article.Title}}</h3>
-                    <p>{{article.Description}}</p>
-                    <p>{{article.Author}}</p>
-                    <p>{{article.PublishDate}}</p>
-                    <p>{{article.Link}}</p>
-                    <p>{{article.Category}}</p>
-                </div>
+    <div class="grid-x grid-margin-x">
+        <div class="small-12 medium-6 large-4 cell" ng-repeat="article in vm.articles">
+            <div class="article article-card" ng-click="vm.popupArticle(article.ArticleId)">
+                <h3>{{article.Title}}</h3>
+                <p>{{article.Description}}</p>
+                <p ng-show="article.Author">Author: {{article.Author}}</p>
+                <p ng-show="article.PublishDate">{{article.PublishDate}}</p>
+                <p ng-show="article.Link">{{article.Link}}</p>
+                <p ng-show="article.Category">Category: {{article.Category}}</p>
             </div>
         </div>
     </div>
