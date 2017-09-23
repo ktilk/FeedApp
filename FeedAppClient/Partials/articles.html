@@ -1,6 +1,8 @@
 ﻿<div ng-controller="articleController as vm">
     <h2>{{vm.title}}</h2>
-    <div class="grid-x grid-margin-x">
+    <pre ng-if="vm.dataLoading">Loading articles...</pre>
+    <pre ng-if="vm.errorMessage">{{vm.errorMessage}}</pre>
+    <div ng-if="!vm.dataLoading && !vm.errorMessage" class="grid-x grid-margin-x">
         <div class="small-12 medium-6 large-4 cell" ng-repeat="article in vm.articles">
             <div class="article article-card" ng-click="vm.popupArticle(article.ArticleId)">
                 <h3>{{article.Title}}</h3>

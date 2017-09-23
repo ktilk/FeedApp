@@ -1,7 +1,9 @@
 ﻿<div ng-controller="articleController as vm">
     <div class="grid-x grid-margin-x">
         <div class="small-12">
-            <div class="article article-full">
+            <pre ng-if="vm.dataLoading">Loading article...</pre>
+            <pre ng-if="vm.errorMessage">{{vm.errorMessage}}</pre>
+            <div ng-if="!vm.dataLoading && !vm.errorMessage" class="article article-full">
                 <h1>{{vm.article.title}}</h1>
                 <p>
                     <a href="{{vm.article.url}}">Original article: {{vm.article.url}}</a>
