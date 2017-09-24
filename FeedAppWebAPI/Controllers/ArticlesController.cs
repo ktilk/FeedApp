@@ -15,11 +15,20 @@ namespace FeedAppWebAPI.Controllers
             _repo = new ArticleRepository();
         }
 
+        /// <summary>
+        /// Returns a list of articles
+        /// </summary>
+        /// <returns></returns>
         public List<Article> GetArticles()
         {
             return _repo.All;
         }
 
+        /// <summary>
+        /// Gets an article by ID via Mercury Web Parser API
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IHttpActionResult GetByIdViaMercury(int id)
         {
             var article = _repo.GetByIdViaMercury(id);

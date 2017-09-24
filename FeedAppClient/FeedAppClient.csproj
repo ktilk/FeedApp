@@ -110,6 +110,7 @@
     <Content Include="Assets\js\vendor\foundation.min.js" />
     <Content Include="Assets\js\vendor\jquery.js" />
     <Content Include="Assets\js\vendor\what-input.js" />
+    <Content Include="favicon.ico" />
     <Content Include="Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="App\app.js" />

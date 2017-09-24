@@ -25,6 +25,9 @@ namespace DAL
             GetArticlesFromFeed();
         }
 
+        /// <summary>
+        /// Creates Article objects from XML and puts them to a List
+        /// </summary>
         public void GetArticlesFromFeed()
         {
             const string feedUri = "https://flipboard.com/@raimoseero/feed-nii8kd0sz?rss";

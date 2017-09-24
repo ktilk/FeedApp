@@ -14,6 +14,12 @@ namespace DAL.Services
 {
     public class ArticleService
     {
+        /// <summary>
+        /// Creates an article from SyndicationItem data.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="itemId"></param>
+        /// <returns></returns>
         public Article CreateArticle(SyndicationItem item, int itemId)
         {
             var article = new Article();
@@ -34,6 +40,11 @@ namespace DAL.Services
             return article;
         }
 
+        /// <summary>
+        /// Returns JSON of an article fetched via Mercury Web Parser API
+        /// </summary>
+        /// <param name="articleUrl"></param>
+        /// <returns></returns>
         public JObject GetArticleViaMercury(string articleUrl)
         {
             var request = (HttpWebRequest)WebRequest.Create("https://mercury.postlight.com/parser?url=" + articleUrl);
